@@ -227,53 +227,35 @@ body, html {
         font-size: 1.5rem;   
     }
     @media (min-width: 900px){
-        :root {
-            --thumbnails-image-width: 20vw;
-            --thumbnails-image-height: 12vw;
-            --thumbnail-title-height: calc(var(--thumbnails-image-height) * 0.25);
-        }
+    
         .thumbnails-list {
-            flex-direction: column;
-            flex-wrap: nowrap;
-            order: -1;
+            
             max-height: 85vh;
-            justify-content: flex-start;
-            padding: 0; 
-            margin: 0;   
+           
+           padding-right: 2vw
         }
         .thumbnails-title {
-            font-size: 1.8rem;
+            
+            font-size: 1.5rem;
+            
         }
-        .thumbnails-item {
-            margin-left:0;
-            overflow:hidden;
-            margin-top: 0;
-        }
-        .thumbnails-item +.thumbnails-item {
-            margin-top: 2vh;
-        }
+        
+        
         .details-image {
-            width: 60vw;
-            height: 43vw;
+            width: 50vw;
+            height: 38vw;
         }
         .details-title {
-            left: 2vw;
-            bottom: 6vw;        
+            left: 0vw;
+            bottom: 7vw;
+            font-size: 2rem;
+            
         }
-        .main-content {
-            display: flex;
-             justify-content: space-around;         
-        }
-        .details-container {
-            justify-content: center;     
-        }
-        body {
-            justify-content: space-between;
-            margin: 0;
-        }
+       
         .logo-title {
             margin: 0;
-            font-size: 1.5rem;   
+            font-size: 2rem;
+            
         }
 }
 }
