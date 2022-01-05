@@ -39,6 +39,16 @@ body {
     padding-top: 2.5vh;
 }
 
+/* homework */
+.hidden .thumbnails-list {
+
+    --thumbnails-image-width: 42vw;
+    --thumbnails-image-height: 25vw;
+    --thumbnail-title-height: calc(var(--thumbnails-image-height) * 0.25);
+    max-height: 90vh;
+
+}
+
 .thumbnails-image {
     width: var(--thumbnails-image-width);
     height: var(--thumbnails-image-height);
@@ -68,6 +78,16 @@ body {
     align-items: center;
 }
 
+.hide-button {
+    position: absolute;
+    right: 10vw;
+    top: 2vw;
+}
+
+.hidden .details-container {
+    display: none;
+}
+
 .thumbnails-title {
     display: block;
     text-align: center;
@@ -86,7 +106,15 @@ body {
     min-height: calc(var(--thumbnails-image-height)) + var(--thumbnails-title-height);
     border-radius: 25%;
     overflow: hidden;
+}
 
+.selected.thumbnails-item {
+    border-radius: 0;
+    border: 3px solid pink;
+}
+.hidden.selected.thumbnails-item {
+    border-radius: 0;
+    border: 0;
 }
 
 .thumbnails-anchor {
@@ -136,6 +164,7 @@ body {
     padding-top: 2.5vh;
 }
 
+
 .thumbnails-image {
     width: var(--thumbnails-image-width);
     height: var(--thumbnails-image-height);
@@ -165,8 +194,8 @@ body {
 .thumbnails-title {
     display: block;
     text-align: center;
-    background-color: beige;
-    color: blue;
+    background-color: cornflowerblue;
+    color: white;
     font-size: 1.2rem;
     width: var(--thumbnails-image-width);
     height: var(--thumbnail-title-height);
@@ -217,14 +246,29 @@ html {
         margin: 0;
     }
 
-    .thumbnails-title {
-        font-size: 1rem;
+    .hidden .thumbnails-list {
+        --thumbnails-image-width: 30vw;
+        --thumbnails-image-height: 20vw;
+        --thumbnail-title-height: calc(var(--thumbnails-image-height) * 0.22);
+
+        flex-wrap: wrap;
+        flex-direction: unset;
+        justify-content: space-around;
+
     }
+
+    .hidden .thumbnails-title {
+        font-size: 1.2rem;
+        color: white;
+        background: cornflowerblue;
+
+    }
+
 
     .thumbnails-item {
         margin-left: 0;
         overflow: hidden;
-        margin-top: 0;
+
     }
 
     .thumbnails-item+.thumbnails-item {
@@ -261,6 +305,14 @@ html {
     }
 
     @media (min-width: 900px) {
+
+        .hidden .thumbnails-title {
+
+            font-size: 2rem;
+           
+
+
+        }
 
         .thumbnails-list {
 
