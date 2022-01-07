@@ -6,12 +6,12 @@ let selectedItem;
 let deleteBorder;
 
 let anchors = document.querySelectorAll('.thumbnails-anchor');
-for(let i = 0; i < anchors.length; i++) {
-    anchors[i].addEventListener('click', function(event) {
-        event.preventDefault(); 
+for (let i = 0; i < anchors.length; i++) {
+    anchors[i].addEventListener('click', function (event) {
+        event.preventDefault();
         showDetails();
-        setDetails(anchors[i]); 
-       
+        setDetails(anchors[i]);
+
     });
 }
 
@@ -25,18 +25,8 @@ function setDetails(anchor) {
         selectedItem.classList.remove('selected');
     }
     selectedItem = anchor.parentElement;
-
-    if (selectedItem){
-        selectedItem.classList.remove("selected");
-    }
-
-
-    
-
-   
-
     //get element with class thumbnails-title inside the given anchor
-    let  thumbnailsTitleSelector = `[href="${hrefValue}"] .thumbnails-title`;
+    let thumbnailsTitleSelector = `[href="${hrefValue}"] .thumbnails-title`;
     let thumbnailsTitleElement = document.querySelector(thumbnailsTitleSelector);
     //dog name exist inside thumbnailTitleElenent.textContent
     detailsTitle.textContent = `${thumbnailsTitleElement.textContent}: ${anchor.getAttribute('data-details-title')}`;
@@ -44,11 +34,13 @@ function setDetails(anchor) {
 
 function showDetails() {
     mainContentEl.classList.remove('hidden');
+    detailsImage.parentElement.classList.add('is-tiny');
+    setTimeout(function() {detailsImage.parentElement.classList.remove('is-tiny');});
 }
 
 function hideDetails() {
     mainContentEl.classList.add('hidden');
+    if (selectedItem) {
+        selectedItem.classList.remove('selected');
+    }
 }
-
-
-

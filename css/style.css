@@ -122,7 +122,7 @@ body {
 }
 
 .logo-title {
-    background-color: fuchsia;
+    background-color: darkslateblue;
     color: ghostwhite;
     font-size: 2rem;
     text-align: center;
@@ -189,6 +189,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 1s cubic-bezier(0.3, 0.5, 0.7, 2);
 }
 
 .thumbnails-title {
@@ -216,17 +217,27 @@ body {
 }
 
 .logo-title {
-    background-color: fuchsia;
+    background-color: darkslateblue;
     color: ghostwhite;
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
     margin: 0;
+    font-family: lakeshor;
+}
+
+.is-tiny {
+    transform: scale(0.001);
+    transition: 0s;
 }
 
 body,
 html {
     height: 100%;
+}
+
+.thumbnails-item:hover {
+    transform: scale(1.2);
 }
 
 @media (min-width: 568px) {
