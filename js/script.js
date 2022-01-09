@@ -5,6 +5,7 @@ let mainContentEl = document.querySelector('.main-content');
 let selectedItem;
 let deleteBorder;
 
+
 let anchors = document.querySelectorAll('.thumbnails-anchor');
 for (let i = 0; i < anchors.length; i++) {
     anchors[i].addEventListener('click', function (event) {
@@ -44,3 +45,36 @@ function hideDetails() {
         selectedItem.classList.remove('selected');
     }
 }
+
+function saysDog1() {
+    let myAudio = new Audio();
+    myAudio.src='../dog voice/Sound_16378.mp3';
+    myAudio.autoplay = true;
+}
+
+function saysDog2() {
+    let myAudio = new Audio();
+    myAudio.src='../dog voice/dog2.mp3';
+    myAudio.autoplay = true;
+}
+
+function saysDog3() {
+    let myAudio = new Audio();
+    myAudio.src='../dog voice/dog3.mp3';
+    myAudio.autoplay = true;
+}
+
+function saysDog4() {
+    let myAudio = new Audio();
+    myAudio.src='../dog voice/Sound_22342.mp3';
+    myAudio.autoplay = true;
+}
+
+function saysDog5() {
+    let myAudio = new Audio();
+    myAudio.src='../dog voice/dog5.mp3';
+    myAudio.autoplay = true;
+}
+
+
+
